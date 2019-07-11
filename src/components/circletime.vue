@@ -110,7 +110,7 @@ svg circle {
   stroke-width: 21.5px;
   stroke: #FF4384;
   fill: none;
-  animation: countdown 10s linear forwards;
+  animation: countdown 30s linear forwards;
 }
 
 @keyframes countdown {

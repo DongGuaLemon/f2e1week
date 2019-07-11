@@ -28,7 +28,8 @@ export default {
             text:'',
             title:'The First thing to do today',
             time:1500,
-            data:true
+            data:true,
+            settime:''
         }
     },
     components:{
@@ -39,7 +40,12 @@ export default {
             let vm =this; 
         },
         Timepic(){
-            console.log(123) 
+            let vm =this;
+            this.settime=setTimeout(function () {
+                    console.log(123)
+                    vm.time=vm.time-1;
+                    vm.Timepic();
+               },1000)
         }
         },
     mounted(){
@@ -58,8 +64,11 @@ export default {
     created(){
         let vm =this
         bus.$on('Event',data=>{
-             this.data=data.msg
-            vm.Time()
+            this.data=data.msg
+            if(this.data==true){
+                this.Timepic();
+            }
+            else clearTimeout(this.settime)
         })
   },
    beforeDestroy: function() {
