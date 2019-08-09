@@ -40,6 +40,8 @@ export default {
     right: 0;
     display:flex;
     z-index: 100;
+    justify-content:space-between;
+    align-items: center
 }
 .Mainclockright{
     width: 36%;
@@ -58,6 +60,6 @@ export default {
 }
 .leftblock2{
     margin-top: 5%;
-     margin-left: 8%;
+    margin-left: 10%;
 }
 </style>
